@@ -1,0 +1,15 @@
+services:
+  legacy-kvm:
+    image: legacy-kvm:latest
+    container_name: legacy-kvm
+    network_mode: $NETWORK_MODE
+    ports:
+      - $VNC_PORT:5900
+    volumes:
+      - $DOCKERDIR/appdata/legacy-kvm:/config
+    environment:
+      - KVM_URL=$KVM_URL
+      - VNC_PASSWORD=$VNC_PASSWORD
+      - DISPLAY=:0
+      - JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk
+    restart: unless-stopped
