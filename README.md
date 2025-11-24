@@ -1,3 +1,4 @@
+# legacy-kvm
 # Docker Container for Legacy Avocent KVM (Avocent 3200)
 
 This repository contains a Docker environment pre-configured with Firefox 52 ESR, Java 8, and IcedTea-Web. It allows access to the web interface and Java KVM consoles of legacy hardware like the **Avocent AV3200**, which fail to load on modern systems due to "weak" security algorithms (MD5, SSLv3, RC4).
